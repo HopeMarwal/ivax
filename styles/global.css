@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  display: flex;
+  width: 100%;
+}
+aside {
+  width: 7%;
+}
+main {
+  @apply border-r border-l border-borderSideColor flex;
+  width: 86%;
+  min-height: 100vh;
+  pointer-events: none;
+}
+.middle_line {
+  @apply absolute w-px bg-borderSideColor;
+  left: 50%;
+  min-height: 100vh;
+}
+.btn {
+
+}
