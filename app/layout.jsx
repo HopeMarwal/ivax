@@ -15,7 +15,7 @@ const RootLayout = ({ children }) => {
   return ( 
     <html lang='en'>
       <body>
-        <aside>side1</aside>
+        <aside></aside>
 
         <main>
           <div className='middle_line'></div>
@@ -24,7 +24,7 @@ const RootLayout = ({ children }) => {
 
         <aside>
           <Nav />
-          side 2
+          
         </aside>
       </body>      
     </html>

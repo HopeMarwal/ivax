@@ -1,6 +1,29 @@
 'use client'
 import { useState } from "react"
 
+const menuItems = [
+  {
+    title: 'Contact',
+    link: '#contact'
+  },
+  {
+    title: 'Why work with us',
+    link: '#work'
+  },
+  {
+    title: 'We deliver',
+    link: '#deliver'
+  },
+  {
+    title: 'They trust us',
+    link: '#trust'
+  },
+  {
+    title: 'Latest projects',
+    link: '#latest'
+  }
+]
+
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -36,21 +59,12 @@ export default function Nav() {
         <div className="wrapper flex flex-wrap h-full w-full pl-10 content-center ">
           <div className="gradient_top"></div>
           <ul className="menu_items">
-            <li className="list_item">
-              <a href='#contact'>Contact</a>
-            </li>
-            <li className="list_item">
-              <a href='#work'>Why work with us</a>
-            </li>
-            <li className="list_item">
-              <a href='#deliver'>We deliver</a>
-            </li>
-            <li className="list_item">
-              <a href='#trust'>They trust us</a>
-            </li>
-            <li className="list_item">
-              <a href='#latest'>Latest projects</a>
-            </li>
+            {menuItems.map((item) => (
+              <li className="list_item" key={item.link} onClick={() => {setIsMenuOpen(false); document.body.style.overflowY = 'visible'}}>
+                <a href={item.link}>{item.title}</a>
+              </li>
+            ))}
+
           </ul>
           <div className="gradient_bottom"></div>
         </div>

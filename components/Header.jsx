@@ -3,7 +3,7 @@ import MainImage from '../public/images/main_img.png'
 
 export default function Header() {
   return (
-    <section className="w-full flex flex-wrap items-center content-start">
+    <div className="w-full flex flex-wrap items-center content-start">
       <header className="w-full p-3">
         <span className="font-league text-primary-green text-xl font-bold">IVAX</span>
       </header>
@@ -33,10 +33,7 @@ export default function Header() {
         </div>
       </div>
       
-
-      
-
-      <div className="w-full flex flex-wrap bg-transparent">
+      <div className="w-full flex flex-wrap bg-transparent px-3">
         <div className="sm:w-3/12 w-6/12">
           <p className="font-bold text-7xl text-primary-green">20+</p>
           <p className="font-bold text-xl">Experts</p>
@@ -55,6 +52,6 @@ export default function Header() {
         </div>
   
       </div>
-    </section>
+    </div>
   )
 }

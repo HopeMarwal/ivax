@@ -7,22 +7,21 @@
 body {
   display: flex;
   width: 100%;
-  height: 4000px;
 }
 aside {
-  width: 8%;
+  width: 6%;
 }
 main {
   @apply border-r border-l border-borderSideColor flex font-league;
-  width: 84%;
-  min-height: 100vh;
+  width: 88%;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 .middle_line {
-  @apply absolute w-px bg-borderSideColor;
+  @apply fixed w-px bg-borderSideColor;
   left: 50%;
-  min-height: 100vh;
-  z-index: 10;
+  height: 100%;
+  z-index: -1;
 }
 
 /* Button style */
@@ -32,11 +31,11 @@ main {
 }
 
 .btn.btn_menu {
-  @apply text-sm px-3;
+  @apply text-sm px-3 absolute right-2 top-0;
 }
 
 .btn.btn_menu.open {
-  @apply text-white absolute right-2 top-0;
+  @apply text-white right-2 top-0;
   z-index: 1000;
 }
 .btn:hover {
@@ -121,6 +120,18 @@ main {
   direction: rtl;
 }
 
+@keyframes opacity {
+  from { opacity: 0 }
+  to { opacity: 1; }
+}
+.wrapper {
+  opacity: 0;
+  animation-name: opacity;
+  animation-delay: 3.7s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
 .gradient_top {
   width: 100%;
   position: relative;
@@ -183,5 +194,13 @@ main {
 .menu_items::-webkit-scrollbar-track {
   margin-bottom: 50px;
   margin-top: 50px;
+}
+
+/* Delivery card */
+
+.delivery_list {
+  padding-left: 20px;
+  height: 110px;
+  list-style-image: url('/images/listImg.svg');
 }
 
