@@ -3,7 +3,7 @@ import React from 'react'
 export default function PromiseSection() {
   return (
     <div className='promise w-full px-3 py-20 '>
-      <h3 className='text-center font-bold text-primary-green text-6xl mb-14'>
+      <h3 className='text-center'>
         We promise <span className='text-primary-yellow'>six things</span>
       </h3>
 
@@ -21,24 +21,16 @@ export default function PromiseSection() {
         </div>
 
         <div className='promise_line'>
-          <div className='circle_wrapper'>
-            <div className="circle"></div>
-          </div>
-          <div className='circle_wrapper'>
-            <div className="circle"></div>
-          </div>
-          <div className='circle_wrapper'>
-            <div className="circle"></div>
-          </div>
-          <div className='circle_wrapper'>
-            <div className="circle"></div>
-          </div>
-          <div className='circle_wrapper'>
-            <div className="circle"></div>
-          </div>
-          <div className='circle_wrapper'>
-            <div className="circle"></div>
-          </div>
+          {
+            [1,2,3,4,5,6].map((item) => (
+              <div className='circle_wrapper' key={item}>
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-yellow opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-secondary-yellow"></span>
+              </span>
+              </div>
+            ))
+          }
         </div>
         
         <div className="flex w-5/12 flex-col md:flex-row md:w-full justify-end gap-10 md:gap-0 md:justify-evenly items-start">

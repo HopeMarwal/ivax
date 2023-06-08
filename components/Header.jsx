@@ -5,13 +5,13 @@ export default function Header() {
   return (
     <div className="w-full flex flex-wrap items-center content-start">
       <header className="w-full p-3">
-        <span className="font-league text-primary-green text-xl font-bold">IVAX</span>
+        <span className="text-primary-green text-xl font-bold">IVAX</span>
       </header>
 
       <div className="w-full flex flex-wrap items-center content-start flex-col-reverse sm:flex-row">
         <div className="sm:w-6/12 w-full mb-8">
 
-          <h2 className="font-league mb-10 text-primary-green text-6xl 2xl:text-lgBanner xl:text-7xl sm:text-5xl px-5 font-bold">
+          <h2 className="mb-10 text-primary-green text-6xl 2xl:text-lgBanner xl:text-7xl sm:text-5xl px-5 font-bold">
             Paint<br></br> your thoughts 
             <p className="text-right">
               with <span className="uppercase text-primary-yellow">ivax</span>

@@ -10,8 +10,8 @@ export default function DeliverSection() {
 
   return (
     <div id='deliver' className='w-full pt-40 px-2'>
-      <h3 className='text-center font-bold text-6xl text-primary-green mb-10'>
-        We <span className='text-primary-yellow'>deliver</span>
+      <h3 className='text-center'>
+        We <span>deliver</span>
       </h3>
       <div className='flex items-center flex-wrap'>
 

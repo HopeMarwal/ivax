@@ -4,7 +4,7 @@ export default function AnimatedBanner() {
   const first = 'UX _ Web development _ Brand identity'
   const sec = 'UX _ Mobile apps _ Video _ Film making'
   return (
-    <div className='w-full'>
+    <div className='w-full px-3'>
       <div className='logo-slider'>
         <div>
           <div className='top'>{first}</div>

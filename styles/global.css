@@ -16,6 +16,12 @@ main {
   z-index: -1;
 }
 
+h3 {
+  @apply mb-10 font-bold text-primary-green text-6xl;
+}
+h3 span {
+  @apply text-primary-yellow;
+}
 /* Button style */
 .btn {
   @apply flex cursor-pointer px-5 items-center justify-center text-zinc-700 text-base relative font-semibold h-12;
@@ -176,7 +182,6 @@ main {
 .promise_item p {
   @apply text-white bg-primary-green p-3 text-sm rounded-xl text-center w-fit;
   max-width: 150px;
-  text-align: center;
 }
 
 .promise_line {
@@ -191,7 +196,7 @@ main {
 }
 
 .circle_wrapper {
-  @apply w-4 h-4 rounded-full bg-primary-yellow/30 flex justify-center items-center;
+  @apply w-4 h-4 rounded-full flex justify-center items-center;
 }
 
 .circle {
@@ -200,23 +205,16 @@ main {
 /* Animated banner */
 
 .logo-slider {
-  padding: 20px;
-  overflow: hidden;
+  @apply p-5 overflow-hidden w-full my-0 flex relative;
   
-  width: 100%;
-  margin: 0 auto;	
-	position: relative;
-	display: flex;
 }
 .logo-slider:hover div {
   animation-play-state: paused;
 }
 	
 .logo-slider div { 
-  display: flex;
-  position: relative;
+  @apply flex relative justify-around;
   animation: marquee 60s linear infinite;
-  justify-content: space-around;
 }
 
 .logo-slider.backwards div{
@@ -234,12 +232,8 @@ main {
 }
 
 .logo-slider:after {
+  @apply absolute w-full h-full left-0 top-0 ;
   content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
 }
 
@@ -251,4 +245,20 @@ main {
 @keyframes marqueeBack {
 	0%   { transform: translateX(-100%); }
 	100% { transform: translateX(0%); }
+}
+
+/* logos section */
+.logos_section {
+  position: relative;
+}
+.logos_section::after {
+  @apply absolute w-full h-full left-0 top-0 ;
+  content: "";
+  background: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.6) 100%);
+}
+.logos {
+  @apply flex justify-between;
+  margin-left: -2%;
+  margin-right: -2%;
+  width: 104%;
 }
