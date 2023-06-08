@@ -17,13 +17,14 @@ const RootLayout = ({ children }) => {
       <body>
         <aside></aside>
 
-        <main>
+        <main className='max-w-screen-xl m-auto relative'>
           <div className='middle_line'></div>
+          <Nav />
           {children}
         </main>
 
-        <aside>
-          <Nav />
+        <aside className='relative'>
+         
           
         </aside>
       </body>      

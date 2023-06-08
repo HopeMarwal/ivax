@@ -23,6 +23,9 @@ module.exports = {
           letterSpacing: '-0.02em',
           fontWeight: '700',
         }],
+      },
+      gap: {
+        '54' : '13.5rem'
       }
     },
   },
