@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const menuItems = [
   {
@@ -26,6 +26,10 @@ const menuItems = [
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflowY = 'visible';
+  }, [])
 
   const handleTOggleMenu = () => {
 

@@ -14,7 +14,7 @@ const RootLayout = ({ children }) => {
   
   return ( 
     <html lang='en'>
-      <body>
+      <body className='overflow-hidden w-full flex'>
         <aside></aside>
 
         <main className='max-w-screen-xl m-auto relative'>

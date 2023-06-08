@@ -2,6 +2,7 @@
 import Header from "@components/Header"
 import DeliverSection from "@components/DeliverSection"
 import PromiseSection from "@components/PromiseSection"
+import AnimatedBanner from "@components/AnimatedBanner"
 
 export default function page() {
   return (
@@ -9,6 +10,7 @@ export default function page() {
       <Header />
       <DeliverSection />
       <PromiseSection />
+      <AnimatedBanner />
     </section>
   )
 }

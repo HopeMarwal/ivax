@@ -4,37 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  display: flex;
-  width: 100%;
-  scroll-behavior: smooth;
-}
 aside {
   width: 6%;
 }
 main {
-  @apply border-r border-l border-borderSideColor flex font-league;
+  @apply border-r border-l border-borderSideColor flex font-league pb-24 overflow-hidden;
   width: 88%;
-  padding-bottom: 100px;
-  overflow: hidden;
 }
 .middle_line {
-  @apply fixed w-px bg-borderSideColor;
-  left: 50%;
-  height: 100%;
+  @apply fixed w-px bg-borderSideColor h-full left-1/2;
   z-index: -1;
 }
 
 /* Button style */
 .btn {
-  @apply flex cursor-pointer px-5 items-center justify-center text-zinc-700 text-base relative font-semibold;
-  height: 48px;
+  @apply flex cursor-pointer px-5 items-center justify-center text-zinc-700 text-base relative font-semibold h-12;
 }
-
 .btn.btn_menu {
   @apply text-sm px-3 absolute right-2 top-0;
 }
-
 .btn.btn_menu.open {
   @apply text-white right-6 top-0;
   z-index: 1000;
@@ -42,26 +30,17 @@ main {
 .btn:hover {
   @apply text-white;
 }
-
 .btn::before {
-  @apply border-primary-yellow border absolute left-0 inline-block transition-all;
+  @apply border-primary-yellow border absolute left-0 inline-block transition-all w-12 h-12 rounded-full;
   content: '';
   z-index: -1;
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
 } 
-
 .btn.btn_menu:before {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
+  @apply w-7 h-7 rounded-full;
 }
-
 .btn:hover::before, .btn.btn_menu.open::before {
   @apply w-full bg-primary-yellow
 }
-
 .btn:active::before {
   @apply bg-secondary-yellow;
 }
@@ -69,13 +48,7 @@ main {
 /* Nav style */
 
 .nav_menu.open {
-  @apply p-2;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 1000;
-  left:0;
-  top: 0;
+  @apply p-2 h-screen w-screen fixed left-0 top-0 z-50;
 }
 
 @keyframes width {
@@ -83,10 +56,9 @@ main {
   to {width: 100%;}
 }
 .menu_block {
-  @apply bg-primary-green absolute w-0;
+  @apply bg-primary-green absolute w-0 left-0;
   height: 21vh;
   z-index: -1;
-  left: 0;
   animation-name: width;
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
@@ -131,44 +103,31 @@ main {
   animation-fill-mode: forwards;
 }
 
-.gradient_top {
-  width: 100%;
-  position: relative;
-  height: 0; 
+.gradient_top, .gradient_bottom {
+  @apply w-full relative h-0;
 }
 
 .gradient_top::before {
+  @apply absolute left-0 top-0 w-full h-12;
   content: '';
-  position: absolute;
-  left: 0;
-  top:0;
-  width: 100%;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(42,82,76,1) 64%);
-  height: 50px;
-}
-
-.gradient_bottom {
-  width: 100%;
-  position: relative;
-  height: 0; 
 }
 
 .gradient_bottom::before {
+  @apply absolute left-0  w-full h-12;
   content: '';
-  position: absolute;
-  left: 0;
   top:-50px;
-  width: 100%;
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(42,82,76,1) 64%);
-  height: 50px;
 }
 
 .list_item {
-  @apply text-5xl text-white font-league font-bold py-2;
+  @apply text-5xl text-white font-league font-bold py-2 text-left;
   transition: all 0.2s linear;
-  text-align: left;
 }
-.list_item:hover {
+.list_item a {
+  transition: all 0.2s linear;
+}
+.list_item:hover a {
   -webkit-text-stroke: 0.5px white;
   color: transparent;
 }
@@ -183,16 +142,15 @@ main {
 }
 
 .menu_items::-webkit-scrollbar-thumb {
-  background: #F2C94C; 
+  @apply bg-primary-yellow;
 }
 
 .menu_items::-webkit-scrollbar-thumb:hover {
-  background: #edc038; 
+  @apply bg-secondary-yellow; 
 }
 
 .menu_items::-webkit-scrollbar-track {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  @apply my-12;
 }
 
 /* Delivery card */
@@ -216,18 +174,15 @@ main {
 }
 
 .promise_item p {
-  @apply text-white bg-primary-green p-3 text-sm rounded-xl;
-  width: fit-content;
+  @apply text-white bg-primary-green p-3 text-sm rounded-xl text-center w-fit;
   max-width: 150px;
   text-align: center;
 }
-
 
 .promise_line {
   @apply w-px md:w-full h-96 md:h-px flex-col md:flex-row md:my-5  flex justify-around items-center;
   background: linear-gradient(180deg, rgba(72, 72, 72, 0) 0.03%, #484848 48.45%, rgba(72, 72, 72, 0) 100%);
 }
-
 
 @media (min-width: 768px) {
   .promise_line {
@@ -241,4 +196,59 @@ main {
 
 .circle {
   @apply w-2 h-2 rounded-full bg-primary-yellow;
+}
+/* Animated banner */
+
+.logo-slider {
+  padding: 20px;
+  overflow: hidden;
+  
+  width: 100%;
+  margin: 0 auto;	
+	position: relative;
+	display: flex;
+}
+.logo-slider:hover div {
+  animation-play-state: paused;
+}
+	
+.logo-slider div { 
+  display: flex;
+  position: relative;
+  animation: marquee 60s linear infinite;
+  justify-content: space-around;
+}
+
+.logo-slider.backwards div{
+  animation: marqueeBack 60s linear infinite;
+}
+		
+.top, .bottom {
+  width: 1300px;
+  @apply text-7xl font-bold text-primary-green;
+}
+  
+.bottom {
+  @apply text-transparent;
+  -webkit-text-stroke: 1px #2A524C;
+}
+
+.logo-slider:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);
+}
+
+@keyframes marquee {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+@keyframes marqueeBack {
+	0%   { transform: translateX(-100%); }
+	100% { transform: translateX(0%); }
 }
