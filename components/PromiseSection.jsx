@@ -24,9 +24,9 @@ export default function PromiseSection() {
           {
             [1,2,3,4,5,6].map((item) => (
               <div className='circle_wrapper' key={item}>
-              <span class="relative flex h-3 w-3">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-yellow opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-secondary-yellow"></span>
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-yellow opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary-yellow"></span>
               </span>
               </div>
             ))

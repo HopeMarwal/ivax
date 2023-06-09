@@ -57,7 +57,7 @@ export default function Projects() {
       </header>
       
       {/* Project items */}
-      <div className="h-96 sm:h-auto overflow-scroll relative">
+      <div className="h-96 sm:h-auto overflow-scroll sm:overflow-hidden relative">
         <div className='flex sm:flex-wrap justify-start sm:w-full absolute sm:relative gap-3'>
           {
             projects.map((project) => (

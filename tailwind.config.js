@@ -15,7 +15,8 @@ module.exports = {
         borderSideColor: '#EDEEE9',
         'primary-green': '#2A524C',
         'primary-yellow': '#f2c94c',
-        'secondary-yellow': '#edc038'
+        'secondary-yellow': '#edc038',
+        'secondary-blue': '#06171E'
       },
       fontSize: {
         'lgBanner': ['6.8rem', {
@@ -31,7 +32,9 @@ module.exports = {
         '23pr': 'calc(25% - 9px)',
         '33pr': 'calc(33.3% - 8px)',
         '44pr': 'calc(50% - 6px)',
-        
+      },
+      height: {
+        '100' : '28rem'
       }
     },
   },

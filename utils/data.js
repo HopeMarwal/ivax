@@ -12,6 +12,8 @@ import proj_5 from '../public/images/img/proj_5.jpg'
 import proj_6 from '../public/images/img/proj_6.jpg'
 import proj_7 from '../public/images/img/proj_7.jpg'
 import proj_8 from '../public/images/img/proj_8.jpg'
+// Testimonials
+import person from '../public/images/img/person.jpg'
 
 const services = [
   {
@@ -91,4 +93,29 @@ const projects = [
   },
 ]
 
-export { services, projects }
+const testimonials = [
+  {
+    id: '01',
+    img: person,
+    name: 'James Taylor',
+    position: 'SEO Company ',
+    text:'Lorem ipsum dolor sit amet consectetur. Sed eget id odio accumsan in. Pellentesque nunc amet cras vitae. Euismod justo non etiam auctor. Sapien quis feugiat porttitor quis nullam et venenatis sed.'
+  },
+  {
+    id: '02',
+    img: person,
+    name: 'James Taylor',
+    position: 'SEO Company ',
+    text:'Lorem ipsum dolor sit amet consectetur. Sed eget id odio accumsan in. Pellentesque nunc amet cras vitae. Euismod justo non etiam auctor. Sapien quis feugiat porttitor quis nullam et venenatis sed.'
+  },
+  {
+    id: '03',
+    img: person,
+    name: 'James Taylor',
+    position: 'SEO Company ',
+    text:'Lorem ipsum dolor sit amet consectetur. Sed eget id odio accumsan in. Pellentesque nunc amet cras vitae. Euismod justo non etiam auctor. Sapien quis feugiat porttitor quis nullam et venenatis sed.'
+  },
+
+]
+
+export { services, projects, testimonials }

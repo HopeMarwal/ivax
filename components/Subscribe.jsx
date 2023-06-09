@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Subscribe() {
   return (
-    <div>
+    <div className='w-full'>
       Subscribe
     </div>
   )
