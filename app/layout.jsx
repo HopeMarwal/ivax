@@ -17,7 +17,7 @@ const RootLayout = ({ children }) => {
       <body className='overflow-hidden w-full flex'>
         <aside></aside>
 
-        <main className='max-w-screen-xl m-auto relative'>
+        <main className='max-w-screen-lg m-auto relative'>
           <div className='middle_line'></div>
           <Nav />
           {children}

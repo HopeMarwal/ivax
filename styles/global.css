@@ -262,3 +262,55 @@ h3 span {
   margin-right: -2%;
   width: 104%;
 }
+
+/* Projects */
+
+.category_item {
+  @apply uppercase text-xs cursor-pointer relative;
+}
+.category_item.active {
+  @apply text-primary-yellow;
+}
+.category_item span {
+  @apply absolute -right-3 -top-2;
+}
+.project_card {
+  @apply  max-w-sm sm:w-44pr md:w-33pr lg:w-23pr relative cursor-pointer mb-5;
+}
+@media (max-width: 640px) {
+  .project_card {
+    min-width: 300px;
+  }
+}
+
+.image {
+  height: 300px;
+  position: relative;
+}
+
+.image img {
+ transition: all 0.5s linear;
+}
+.image:after {
+  content: url('/images/link_icon.svg');
+  background: #00000050;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.image:hover img {
+  transform: scale(1.03);
+}
+.image:hover:after {
+  opacity: 1;
+  transform: scale(1.03);
+  
+}

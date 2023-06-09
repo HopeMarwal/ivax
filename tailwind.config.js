@@ -26,6 +26,12 @@ module.exports = {
       },
       gap: {
         '54' : '13.5rem'
+      },
+      width: {
+        '23pr': 'calc(25% - 9px)',
+        '33pr': 'calc(33.3% - 8px)',
+        '44pr': 'calc(50% - 6px)',
+        
       }
     },
   },

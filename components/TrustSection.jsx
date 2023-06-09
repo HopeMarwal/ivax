@@ -7,10 +7,10 @@ import logo_2 from '../public/images/logos/logo_2.svg'
 import logo_3 from '../public/images/logos/logo_3.svg'
 import logo_4 from '../public/images/logos/logo_4.svg'
 
-export default function TrustSection() {
+export default function TrustSection({h3, span}) {
   return (
     <div className="w-full py-20">
-      <h3 className="px-3">They <span>trust us</span></h3>
+      <h3 className="px-3">{h3} <span>{span}</span></h3>
 
       <div className="logos_section">
         <div className="logos">
