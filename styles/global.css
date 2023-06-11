@@ -17,7 +17,7 @@ main {
 }
 
 h3 {
-  @apply mb-10 font-bold text-primary-green text-6xl;
+  @apply mb-10 font-bold text-primary-green text-4xl md:text-6xl;
 }
 h3 span {
   @apply text-primary-yellow;
@@ -25,6 +25,7 @@ h3 span {
 /* Button style */
 .btn {
   @apply flex cursor-pointer px-5 items-center justify-center text-zinc-700 text-base relative font-semibold h-12;
+  z-index: 10;
 }
 .btn.btn_menu {
   @apply text-sm px-3 absolute right-2 top-0;
@@ -329,4 +330,35 @@ h3 span {
 .selected div {
   transition: all 0.5s linear;
   transform: scale(1.1);
+}
+
+/* Form */
+
+.form_label {
+  @apply flex items-center gap-1 relative pl-6 text-primary-green;
+}
+.form_label input {
+  @apply absolute cursor-pointer w-0 h-0 left-0 top-0;
+}
+
+.form_label input:before {
+  @apply absolute top-0 left-0 w-4 h-4 rounded border border-primary-green;
+  content: '';
+ 
+}
+
+.form_label input:checked:before {
+  @apply bg-primary-green;
+}
+
+.form_label-text {
+  @apply flex flex-wrap mb-3;
+}
+
+.form_label-text p {
+  @apply w-full text-primary-green ;
+}
+
+.form_label-text input {
+  @apply w-full border-b outline-none;
 }

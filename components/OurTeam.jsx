@@ -42,7 +42,7 @@ export default function OurTeam() {
           
         {
           team.map((item, index) => (
-            <div className={`${ selectedIndex === index && 'selected'} relative flex-[0_0_50%] flex justify-center items-center opacity-75`} key={index}>
+            <div className={`${ selectedIndex === index && 'selected'} relative flex-[0_0_80%] md:flex-[0_0_50%] flex justify-center items-center opacity-75`} key={index}>
               
               <div className='h-110 m-auto relative'>
                 <Image

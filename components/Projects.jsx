@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <div className='w-full py-10 px-5'>
 
-      <header className='flex flex-wrap items-center justify-between mb-10'>
+      <header className='flex flex-wrap items-center justify-end md:justify-between mb-10'>
         <h3 className='mb-0'>Latest <span>Projects</span></h3>
 
         {/* Large devise */}
