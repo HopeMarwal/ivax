@@ -118,4 +118,22 @@ const testimonials = [
 
 ]
 
-export { services, projects, testimonials }
+const team = [
+  {
+    img: person,
+    name: 'Katty Williams',
+    role: 'UI/UX Designer'
+  },
+  {
+    img: person,
+    name: 'Harry Newman',
+    role: 'Frontend Developer'
+  },
+  {
+    img: person,
+    name: 'Harry Newman',
+    role: 'Frontend Developer'
+  },
+]
+
+export { services, projects, testimonials, team }

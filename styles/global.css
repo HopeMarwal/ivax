@@ -318,5 +318,15 @@ h3 span {
 /*  Carousel */
 .carousel_controls {
   @apply flex justify-center gap-5 py-5 absolute -bottom-20 left-2/4 -translate-x-1/2;
-  
+}
+
+.selected {
+  opacity: 1;
+  overflow: visible;
+  z-index: 10;
+}
+
+.selected div {
+  transition: all 0.5s linear;
+  transform: scale(1.1);
 }

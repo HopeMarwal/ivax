@@ -1,7 +1,6 @@
 import Image from "next/image"
 
 export default function TestiomonialCard({ data }) {
-  console.log(data)
   return (
     <div className='w-full flex flex-col md:flex-row text-center items-center'>
       <div className="w-full h-100 md:h-96 md:w-6/12">

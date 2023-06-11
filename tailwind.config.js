@@ -34,7 +34,8 @@ module.exports = {
         '44pr': 'calc(50% - 6px)',
       },
       height: {
-        '100' : '28rem'
+        '100' : '28rem',
+        '110' : '45rem'
       }
     },
   },

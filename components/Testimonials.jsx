@@ -53,9 +53,9 @@ export default function Testimonials() {
       <div className='w-full lg:w-6/12 relative'>
         <Carousel>
             {
-              testimonials.map((item) => (
+              testimonials.map((item, index) => (
                 <div className='relative flex-[0_0_100%] flex justify-center items-center pl-1' key={item.id}>
-                  <TestiomonialCard data={item}/>
+                  <TestiomonialCard data={item} key={index} />
                 </div>
               ))
             }
