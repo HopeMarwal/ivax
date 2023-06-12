@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function DeliverCard({ data }) {
   return (
     <div className='px-1 w-11/12 sm:w-full m-auto'>
-      <div className='border-primary-green border rounded-3xl px-7 md:px-9 py-5 mb-10'>
+      <div className=' delivery_card'>
         <header className='flex justify-between items-center mb-3'>
           <Image 
             src={data.img}

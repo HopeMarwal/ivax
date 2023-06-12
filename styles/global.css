@@ -214,17 +214,24 @@ h3 span {
   list-style-image: url('/images/listImg.svg');
 }
 
+.delivery_list li {
+  @apply hover:scale-105 transition-all;
+}
+
+.delivery_card {
+  @apply border-primary-green border rounded-3xl px-7 md:px-9 py-5 mb-10 transition-all hover:border-primary-yellow;
+}
+.delivery_card img {
+  transition: all 0.5s linear;
+}
+.delivery_card:hover img {
+  filter: drop-shadow(0 0 10px #ffe032);
+ 
+}
+
 @keyframes glow {
   0% {filter: drop-shadow(0 -50px 40px #fefce8);}
-  /* 10% {filter: drop-shadow(0 -50px 80px #edc038);}
-  20% {filter: drop-shadow(0 -50px 50px #edc038);}
-  30% {filter: drop-shadow(0 -50px 70px #edc038);}
-  40% {filter: drop-shadow(0 -50px 100px #edc038);} */
   50% {filter: drop-shadow(0 -50px 10px #fff458);}
-  /* 60% {filter: drop-shadow(0 -50px 80px #edc038);}
-  70% {filter: drop-shadow(0 -50px 60px #edc038);}
-  80% {filter: drop-shadow(0 -50px 100px #edc038);}
-  90% {filter: drop-shadow(0 -50px 80px #edc038);} */
   100% {filter: drop-shadow(0 -50px 40px #fef08a);}
 }
 
@@ -249,7 +256,7 @@ h3 span {
 }
 
 .promise_item p {
-  @apply text-white bg-primary-green p-3 text-sm rounded-xl text-center w-fit;
+  @apply text-white hover:shadow-xl bg-primary-green p-3 text-sm rounded-xl text-center w-fit;
   max-width: 150px;
 }
 
@@ -332,6 +339,44 @@ h3 span {
   width: 104%;
 }
 
+@keyframes scale {
+	0% { transform: scale(1) }
+  50% { transform: scale(1.2) }
+	100% { transform: scale(1) }
+}
+
+.logos:nth-child(1) img:nth-child(1) {
+  animation: scale 2s linear infinite;
+}
+.logos:nth-child(1) img:nth-child(2) {
+  animation: scale 1s linear infinite;
+}
+.logos:nth-child(1) img:nth-child(3) {
+  animation: scale 3s linear infinite;
+}
+.logos:nth-child(1) img:nth-child(4) {
+  animation: scale 2.5s linear infinite;
+}
+.logos:nth-child(1) img:nth-child(5) {
+  animation: scale 1.5s linear infinite;
+}
+
+.logos:nth-child(2) img:nth-child(1) {
+  animation: scale 1s linear infinite;
+}
+.logos:nth-child(2) img:nth-child(2) {
+  animation: scale 2s linear infinite;
+}
+.logos:nth-child(2) img:nth-child(3) {
+  animation: scale 2.5s linear infinite;
+}
+.logos:nth-child(2) img:nth-child(4) {
+  animation: scale 3s linear infinite;
+
+}
+.logos:nth-child(2) img:nth-child(5) {
+  animation: scale 1.5s linear infinite;
+}
 /* Projects */
 
 .category_item {
