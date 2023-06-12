@@ -20,9 +20,9 @@ export default function DeliverSection() {
           <DeliverCard data={services[1]}/>
         </div>
 
-        <div className='w-full lg:w-4/12 order-1 lg:order-2'>
+        <div className='w-full lg:w-4/12 order-1 lg:order-2 relative'>
           <Image
-            className='m-auto'
+            className='glow m-auto'
             src={deliver}
             alt='ivax_idea'
           />

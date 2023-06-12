@@ -214,6 +214,28 @@ h3 span {
   list-style-image: url('/images/listImg.svg');
 }
 
+@keyframes glow {
+  0% {filter: drop-shadow(0 -50px 40px #fefce8);}
+  /* 10% {filter: drop-shadow(0 -50px 80px #edc038);}
+  20% {filter: drop-shadow(0 -50px 50px #edc038);}
+  30% {filter: drop-shadow(0 -50px 70px #edc038);}
+  40% {filter: drop-shadow(0 -50px 100px #edc038);} */
+  50% {filter: drop-shadow(0 -50px 10px #fff458);}
+  /* 60% {filter: drop-shadow(0 -50px 80px #edc038);}
+  70% {filter: drop-shadow(0 -50px 60px #edc038);}
+  80% {filter: drop-shadow(0 -50px 100px #edc038);}
+  90% {filter: drop-shadow(0 -50px 80px #edc038);} */
+  100% {filter: drop-shadow(0 -50px 40px #fef08a);}
+}
+
+.glow {
+  @apply m-auto;
+  animation: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+
 /* Promise section */
 .promise {
   background: radial-gradient(circle, rgba(251,251,251,1) 1%, rgba(255,255,255,0) 100%);;
