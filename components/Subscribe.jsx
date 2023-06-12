@@ -17,7 +17,7 @@ export default function Subscribe() {
     email: ''
   });
   return (
-    <div className='w-full mb-10 bg-white flex flex-wrap'>
+    <div className='w-full my-10 bg-white flex flex-wrap'>
       <div className='w-full md:w-6/12 p-3'>
         <h3>Tell us <span>more</span></h3>
         <form className="flex flex-wrap">

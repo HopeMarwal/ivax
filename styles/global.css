@@ -8,7 +8,7 @@ aside {
   width: 6%;
 }
 main {
-  @apply border-r border-l border-borderSideColor flex font-league pb-24 overflow-hidden;
+  @apply border-r border-l border-borderSideColor flex font-league pb-5 overflow-hidden;
   width: 88%;
 }
 .middle_line {
@@ -137,6 +137,19 @@ h3 span {
 .list_item:hover a {
   -webkit-text-stroke: 0.5px white;
   color: transparent;
+}
+
+.social {
+  @apply flex mt-auto absolute bottom-16 left-8 gap-5 items-center;
+}
+
+.social svg {
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.social svg:hover {
+  filter: drop-shadow(0 0 10px #edc038);
 }
 
 /* ScrollBar style */
