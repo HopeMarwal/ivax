@@ -16,6 +16,7 @@ module.exports = {
         'primary-green': '#2A524C',
         'primary-yellow': '#f2c94c',
         'secondary-yellow': '#edc038',
+        'custom-yellow': '#FCF232',
         'secondary-blue': '#06171E'
       },
       fontSize: {

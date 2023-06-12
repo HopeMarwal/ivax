@@ -25,7 +25,14 @@ export default function Header() {
           
         </div>
 
-        <div className="sm:w-6/12 w-full">
+        <div className="sm:w-6/12 w-full relative">
+          <div className="animate_pulse">
+            <div className="w-16 h-16 rounded-full bg-primary-yellow"></div>
+            <div className="w-10 h-10 rounded-full bg-custom-yellow"></div>
+            <div className="w-20 h-20 rounded-full bg-yellow-300"></div>
+            <div className="w-8 h-8 rounded-full bg-yellow-500"></div>
+          </div>
+        
           <Image
             src={MainImage}
             alt='ivax_main_page'
