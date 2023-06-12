@@ -2,13 +2,6 @@
 
 import '@styles/global.css';
 import Nav from '@components/Nav';
-import Head from 'next/head';
-
-
-export const metadata = {
-  title: 'IVAX',
-  description: 'Point your thoughts with IVAX'
-}
 
 const RootLayout = ({ children }) => {
   
