@@ -16,7 +16,7 @@ export default function Subscribe() {
     msg: '',
     email: ''
   });
-  const [submiting, setSubmiting] = useState('ok');
+  const [submiting, setSubmiting] = useState('none');
 
   const handleSubmit = (e) => {
     e.preventDefault()
